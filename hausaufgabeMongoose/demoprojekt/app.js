@@ -4,7 +4,6 @@ const mongoose = require('mongoose');
 //Importiere das Schrauben Model
 const Schraube = require('./models/Schraube');
 
-
 const app = express();
 
 // Connect to MongoDB
@@ -39,6 +38,7 @@ app.get('/sales', async (req, res) => {
     res.status(500).json({ message: err.message });
   }
 });
+
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
